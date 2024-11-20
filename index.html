@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Frontend Mentor | [Blogr]</title>
+  </head>
+  <body>
+    <!-- Product
+
+  Overview
+  Pricing
+  Marketplace
+  Features
+  Integrations
+
+  Company
+
+  About
+  Team
+  Blog
+  Careers
+
+  Connect
+
+  Contact
+  Newsletter
+  LinkedIn
+  
+  Login
+  Sign Up
+
+  
+  
+
+  
+  
+
+  Designed for the future
+
+  Introducing an extensible editor
+  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+  change the looks of a blog.
+
+  Robust content management
+  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+
+  State of the Art Infrastructure
+  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+
+  Free, open, simple
+  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+
+  Powerful tooling
+  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+  capable of producing even the most complicated sites.
+
+  Product
+
+  Overview
+  Pricing
+  Marketplace
+  Features
+  Integrations
+
+  Company
+
+  About
+  Team
+  Blog
+  Careers
+
+  Connect
+  
+  Contact
+  Newsletter
+  LinkedIn -->
+
+    <!-- header -->
+    <header class="header">
+      <div class="header__nav-and-logo-container">
+        <!-- logo -->
+        <img
+          src="./images/logo.svg"
+          alt="logo image"
+          class="header__nav-and-logo-container__logo-image"
+        />
+
+        <!-- hamburger icon -->
+        <img
+          class="header__nav-and-logo-container__hamburger-icon active"
+          src="./images/icon-hamburger.svg"
+          alt="hamburger icon for open mobile navbar"
+        />
+
+        <!-- close icon -->
+        <img
+          class="header__nav-and-logo-container__close-icon"
+          src="./images/icon-close.svg"
+          alt="cross sign for closing mobile navbar"
+        />
+
+        <!-- mobile navbar -->
+        <nav class="header__nav-and-logo-container__mobile-nav-container">
+          <ul
+            class="header__nav-and-logo-container__mobile-nav-container__list"
+          >
+            <li
+              class="header__nav-and-logo-container__mobile-nav-container__list__item"
+            >
+              <a
+                class="header__nav-and-logo-container__mobile-nav-container__list__item__link"
+                href="#"
+                >Product
+                <img src="./images/icon-arrow-dark.svg" alt="downward arrow"
+              /></a>
+              <ul class="sublist">
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Integrations</a></li>
+              </ul>
+            </li>
+            <li
+              class="header__nav-and-logo-container__mobile-nav-container__list__item"
+            >
+              <a
+                class="header__nav-and-logo-container__mobile-nav-container__list__item__link"
+                href="#"
+                >Company
+                <img src="./images/icon-arrow-dark.svg" alt="downward arrow"
+              /></a>
+              <ul class="sublist">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </li>
+            <li
+              class="header__nav-and-logo-container__mobile-nav-container__list__item"
+            >
+              <a
+                class="header__nav-and-logo-container__mobile-nav-container__list__item__link"
+                href="#"
+                >Connect
+                <img src="./images/icon-arrow-dark.svg" alt="downward arrow"
+              /></a>
+              <ul class="sublist">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Newletter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </li>
+            <li
+              class="header__nav-and-logo-container__mobile-nav-container__list__item"
+            >
+              <a class="login-btn" href="#">Login</a>
+            </li>
+            <li
+              class="header__nav-and-logo-container__mobile-nav-container__list__item"
+            >
+              <a id="signup-btn" href="#">Sign up</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- desktop navbar -->
+        <nav
+          class="header__nav-and-logo-container__desktop-nav-container"
+        ></nav>
+      </div>
+
+      <!-- header background image -->
+      <img
+        src="./images/bg-pattern-intro-mobile.svg"
+        class="header__background-image"
+        alt="light orange transparent bubbles for hero section"
+      />
+
+      <!-- hero section -->
+      <section class="header__hero-section">
+        <h1 class="header__hero-section__title">
+          A modern publishing platform
+        </h1>
+        <p class="header__hero-section__subtitle">
+          Grow your audience and build your online brand
+        </p>
+        <div class="header__hero-section__buttons-container">
+          <a class="header__hero-section__buttons-container__button" href="#"
+            >Start for Free</a
+          >
+          <a class="header__hero-section__buttons-container__button" href="#"
+            >Learn More</a
+          >
+        </div>
+      </section>
+    </header>
+    <script src="./script.js"></script>
+  </body>
+</html>

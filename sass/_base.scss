@@ -1,0 +1,81 @@
+// _base.scss
+
+/* Basic Typography */
+body {
+  font-family: map-get($fonts, overpass); // Use the default font family
+  font-weight: map-get(
+    map-get($font-weights, overpass),
+    light
+  ); // Set a default font weight
+  color: map-get(
+    map-get($colors, neutral),
+    very-dark-grayish-blue
+  ); // Set a base text color
+  background-color: map-get(
+    map-get($colors, neutral),
+    white
+  ); // Set background color
+  line-height: 1.6;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: map-get($fonts, overpass); // Use a consistent font for headings
+  color: map-get(
+    map-get($colors, primary),
+    very-dark-blue
+  ); // Set heading color
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+/* Links */
+a {
+  color: map-get(map-get($colors, primary), light-red);
+  &:hover,
+  &:focus {
+    color: map-get(map-get($colors, primary), very-light-red);
+  }
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1em;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  font-weight: map-get(map-get($font-weights, ubuntu), medium);
+  color: map-get(map-get($colors, neutral), white);
+  background-color: map-get(map-get($colors, primary), light-red);
+  padding: 0.8em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: map-get(map-get($colors, primary), very-light-red);
+  }
+}
+
+/* Form Elements */
+input,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
+  padding: 0.5em;
+  border: 1px solid map-get(map-get($colors, neutral), grayish-blue);
+  border-radius: 4px;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}

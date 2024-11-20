@@ -1,0 +1,56 @@
+// _reset.scss
+
+/* Remove default margin and padding */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set up a consistent font family, size, and line height */
+html {
+  font-size: 100%; // 16px
+  line-height: 1.5;
+  font-family: map-get($fonts, overpass); // Use your font variable if needed
+}
+
+/* Make images, videos, and iframes responsive */
+img,
+video,
+iframe {
+  max-width: 300%;
+  height: auto;
+}
+
+/* Remove bullet points and list padding */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reset links and buttons */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit; // Consistent font
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Set uniform body and html heights */
+html,
+body {
+  height: 100%;
+}
