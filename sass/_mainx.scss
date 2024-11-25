@@ -1,0 +1,83 @@
+.main {
+  &__future-design-section,
+  &__features-section {
+    text-align: center;
+    margin: 10rem 0 5rem;
+
+    &__title {
+      font-size: 1.6rem;
+      margin-bottom: 2.25rem;
+    }
+
+    &__illustration-image {
+      width: 100%;
+    }
+
+    &__description-container {
+      &__item {
+        margin: 2rem 0;
+        padding: 0 1rem;
+
+        &__title {
+          font-size: 1.55rem;
+          margin-bottom: 1.25rem;
+        }
+      }
+    }
+  }
+
+  &__infrastructure-section {
+    border: 1px solid #ffffff00;
+    text-align: center;
+    margin-top: 12rem;
+    position: relative;
+    background-color: map-get($colors, gradient, body, very-dark-gray-blue);
+    z-index: -1;
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+
+    &__circles-container {
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+
+      &__illustration-circles-image {
+        width: 100%;
+        position: absolute;
+        top: -25%;
+        left: 0;
+        z-index: -2;
+        transform: translateX(-17%);
+        width: 150%;
+      }
+    }
+
+    &__illustration-phone-image {
+      width: 100%;
+      position: absolute;
+      top: -25%;
+      left: 0;
+      z-index: -1;
+    }
+
+    &__description-container {
+      padding: 0 1rem;
+      margin: 2rem 0;
+      margin: 15.5rem 0 5rem;
+      position: relative;
+      z-index: 3;
+
+      &__title {
+        color: map-get($colors, neutral, white);
+      }
+
+      &__description {
+        color: map-get($colors, neutral, grayish-blue);
+      }
+    }
+  }
+}

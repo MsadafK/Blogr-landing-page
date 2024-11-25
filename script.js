@@ -41,19 +41,23 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   function handleMouseOver(event) {
     const item = event.currentTarget;
+    const link = item.querySelector("a");
     const sublist = item.querySelector(".sublist");
     if (sublist) {
-      sublist.classList.add("flex");
+      link.classList.add("changeTextColor");
       handleRotate(item);
+      sublist.classList.add("flex");
     }
   }
 
   function handleMouseOut(event) {
     const item = event.currentTarget;
+    const link = item.querySelector("a");
     const sublist = item.querySelector(".sublist");
     if (sublist) {
-      sublist.classList.remove("flex");
+      link.classList.remove("changeTextColor");
       handleRotate(item);
+      sublist.classList.remove("flex");
     }
   }
 
@@ -69,14 +73,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
     list_items.forEach((itemx) => {
       const sublist = itemx.querySelector(".sublist");
       if (sublist && itemx !== item) {
-        sublist.classList.remove("flex");
-        // handleRotate(item);
         itemx.children[0].children[0].classList.remove("rotate");
+        sublist.classList.remove("flex");
+        itemx.querySelector("a").classList.remove("changeTextColor");
       }
       if (sublist && itemx === item) {
-        sublist.classList.toggle("flex");
-        // handleRotate(item);
         itemx.children[0].children[0].classList.toggle("rotate");
+        sublist.classList.toggle("flex");
+        itemx.querySelector("a").classList.toggle("changeTextColor");
       }
     });
   }
@@ -98,7 +102,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   // Manage the behavior based on the screen size
   function handleScreenResize() {
-    console.log("resize");
     const screenWidth = window.innerWidth;
     if (screenWidth < 768 && !isMobile) {
       isMobile = true;

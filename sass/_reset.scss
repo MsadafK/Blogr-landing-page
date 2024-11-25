@@ -16,14 +16,6 @@ html {
   font-family: map-get($fonts, overpass); // Use your font variable if needed
 }
 
-/* Make images, videos, and iframes responsive */
-img,
-video,
-iframe {
-  max-width: 300%;
-  height: auto;
-}
-
 /* Remove bullet points and list padding */
 ul,
 ol {

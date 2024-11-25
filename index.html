@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <!-- Add description meta tag for better SEO and screen reader context -->
+    <meta
+      name="description"
+      content="Blogr - A modern publishing platform to grow your audience and build your online brand"
+    />
 
     <link
       rel="icon"
@@ -12,191 +16,174 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Frontend Mentor | [Blogr]</title>
+    <title>Blogr | Modern Publishing Platform</title>
   </head>
   <body>
-    <!-- Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-
-  Contact
-  Newsletter
-  LinkedIn
-  
-  Login
-  Sign Up
-
-  
-  
-
-  
-  
-
-  Designed for the future
-
-  Introducing an extensible editor
-  Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
-  The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
-  videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
-  change the looks of a blog.
-
-  Robust content management
-  Flexible content management enables users to easily move through posts. Increase the usability of your blog 
-  by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
-
-  State of the Art Infrastructure
-  With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-
-  Free, open, simple
-  Blogr is a free and open source application backed by a large community of helpful developers. It supports 
-  features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
-  and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-
-  Powerful tooling
-  Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
-  capable of producing even the most complicated sites.
-
-  Product
-
-  Overview
-  Pricing
-  Marketplace
-  Features
-  Integrations
-
-  Company
-
-  About
-  Team
-  Blog
-  Careers
-
-  Connect
-  
-  Contact
-  Newsletter
-  LinkedIn -->
-
-    <!-- header -->
-    <header class="header">
+    <header class="header" role="banner">
       <div class="header__nav-and-logo-container">
-        <!-- logo -->
-        <img
-          src="./images/logo.svg"
-          alt="logo image"
+        <!-- Add proper logo link -->
+        <a
+          href="/"
+          aria-label="Blogr home"
           class="header__nav-and-logo-container__logo-image"
-        />
+        >
+          <img src="./images/logo.svg" alt="Blogr logo" />
+        </a>
 
-        <!-- hamburger icon -->
-        <img
+        <!-- Add ARIA labels and controls for menu buttons -->
+        <button
           class="header__nav-and-logo-container__hamburger-icon active"
-          src="./images/icon-hamburger.svg"
-          alt="hamburger icon for open mobile navbar"
-        />
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <img src="./images/icon-hamburger.svg" alt="" role="presentation" />
+        </button>
 
-        <!-- close icon -->
-        <img
+        <button
           class="header__nav-and-logo-container__close-icon"
-          src="./images/icon-close.svg"
-          alt="cross sign for closing mobile navbar"
-        />
+          aria-label="Close menu"
+          aria-expanded="true"
+          aria-controls="mobile-nav"
+        >
+          <img src="./images/icon-close.svg" alt="" role="presentation" />
+        </button>
 
-        <!-- mobile navbar -->
-        <nav class="header__nav-and-logo-container__mobile-nav-container">
+        <!-- Mobile navigation with proper ARIA -->
+        <nav
+          class="header__nav-and-logo-container__mobile-nav-container"
+          id="mobile-nav"
+          aria-label="Mobile navigation"
+        >
           <ul
             class="header__nav-and-logo-container__mobile-nav-container__list"
+            role="menubar"
           >
             <li
               class="header__nav-and-logo-container__mobile-nav-container__list__item"
+              role="none"
             >
-              <a
+              <button
                 class="header__nav-and-logo-container__mobile-nav-container__list__item__link"
-                href="#"
-                >Product
-                <img src="./images/icon-arrow-dark.svg" alt="downward arrow"
-              /></a>
-              <ul class="sublist">
-                <li><a href="#">Overview</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Marketplace</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Integrations</a></li>
+                aria-expanded="false"
+                aria-controls="product-submenu"
+                role="menuitem"
+              >
+                Product
+                <img
+                  src="./images/icon-arrow-dark.svg"
+                  alt=""
+                  role="presentation"
+                />
+              </button>
+              <ul
+                class="sublist"
+                id="product-submenu"
+                role="menu"
+                aria-label="Product submenu"
+              >
+                <li role="none"><a href="#" role="menuitem">Overview</a></li>
+                <li role="none"><a href="#" role="menuitem">Pricing</a></li>
+                <li role="none"><a href="#" role="menuitem">Marketplace</a></li>
+                <li role="none"><a href="#" role="menuitem">Features</a></li>
+                <li role="none">
+                  <a href="#" role="menuitem">Integrations</a>
+                </li>
               </ul>
             </li>
             <li
               class="header__nav-and-logo-container__mobile-nav-container__list__item"
+              role="none"
             >
-              <a
+              <button
                 class="header__nav-and-logo-container__mobile-nav-container__list__item__link"
-                href="#"
-                >Company
-                <img src="./images/icon-arrow-dark.svg" alt="downward arrow"
-              /></a>
-              <ul class="sublist">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Careers</a></li>
+                aria-expanded="false"
+                aria-controls="company-submenu"
+                role="menuitem"
+              >
+                Company
+                <img
+                  src="./images/icon-arrow-dark.svg"
+                  alt=""
+                  role="presentation"
+                />
+              </button>
+              <ul
+                class="sublist"
+                id="company-submenu"
+                role="menu"
+                aria-label="Company submenu"
+              >
+                <li role="none"><a href="#" role="menuitem">About</a></li>
+                <li role="none"><a href="#" role="menuitem">Team</a></li>
+                <li role="none"><a href="#" role="menuitem">Blog</a></li>
+                <li role="none"><a href="#" role="menuitem">Careers</a></li>
               </ul>
             </li>
             <li
               class="header__nav-and-logo-container__mobile-nav-container__list__item"
+              role="none"
             >
-              <a
+              <button
                 class="header__nav-and-logo-container__mobile-nav-container__list__item__link"
-                href="#"
-                >Connect
-                <img src="./images/icon-arrow-dark.svg" alt="downward arrow"
-              /></a>
-              <ul class="sublist">
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Newletter</a></li>
-                <li><a href="#">LinkedIn</a></li>
+                aria-expanded="false"
+                aria-controls="connect-submenu"
+                role="menuitem"
+              >
+                Connect
+                <img
+                  src="./images/icon-arrow-dark.svg"
+                  alt=""
+                  role="presentation"
+                />
+              </button>
+              <ul
+                class="sublist"
+                id="connect-submenu"
+                role="menu"
+                aria-label="Connect submenu"
+              >
+                <li role="none"><a href="#" role="menuitem">Contact</a></li>
+                <li role="none"><a href="#" role="menuitem">Newsletter</a></li>
+                <li role="none"><a href="#" role="menuitem">LinkedIn</a></li>
               </ul>
             </li>
+            <div class="horizontal-rule" role="separator"></div>
             <li
               class="header__nav-and-logo-container__mobile-nav-container__list__item"
+              role="none"
             >
-              <a class="login-btn" href="#">Login</a>
+              <a class="login-btn" href="#" role="menuitem">Login</a>
             </li>
             <li
               class="header__nav-and-logo-container__mobile-nav-container__list__item"
+              role="none"
             >
-              <a id="signup-btn" href="#">Sign up</a>
+              <a id="signup-btn" href="#" role="menuitem">Sign up</a>
             </li>
           </ul>
         </nav>
 
-        <!-- desktop navbar -->
+        <!-- Desktop navigation -->
         <nav
           class="header__nav-and-logo-container__desktop-nav-container"
+          aria-label="Desktop navigation"
         ></nav>
       </div>
 
-      <!-- header background image -->
-      <img
-        src="./images/bg-pattern-intro-mobile.svg"
-        class="header__background-image"
-        alt="light orange transparent bubbles for hero section"
-      />
+      <!-- Background image with proper ARIA -->
+      <div class="header__background-container" role="presentation">
+        <img
+          class="header__background-container__background-image"
+          src="./images/bg-pattern-intro-mobile.svg"
+          alt=""
+          role="presentation"
+        />
+      </div>
 
-      <!-- hero section -->
-      <section class="header__hero-section">
-        <h1 class="header__hero-section__title">
+      <!-- Hero section with proper landmark -->
+      <section class="header__hero-section" aria-labelledby="hero-title">
+        <h1 class="header__hero-section__title" id="hero-title">
           A modern publishing platform
         </h1>
         <p class="header__hero-section__subtitle">
@@ -212,6 +199,196 @@
         </div>
       </section>
     </header>
+
+    <main class="main" role="main">
+      <!-- Future design section -->
+      <section
+        class="main__future-design-section"
+        aria-labelledby="future-design-title"
+      >
+        <h2 class="main__future-design-section__title" id="future-design-title">
+          Designed for the future
+        </h2>
+        <img
+          class="main__future-design-section__illustration-image"
+          src="./images/illustration-editor-mobile.svg"
+          alt="Editor interface illustration showing various content management features"
+        />
+        <div class="main__future-design-section__description-container">
+          <div class="main__future-design-section__description-container__item">
+            <h3
+              class="main__future-design-section__description-container__item__title"
+              id="editor-title"
+            >
+              Introducing an extensible editor
+            </h3>
+            <p
+              class="main__future-design-section__description-container__item__description"
+              aria-labelledby="editor-title"
+            >
+              Blogr features an exceedingly intuitive interface which lets you
+              focus on one thing: creating content. The editor supports
+              management of multiple blogs and allows easy manipulation of
+              embeds such as images, videos, and Markdown. Extensibility with
+              plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+          </div>
+          <div class="main__future-design-section__description-container__item">
+            <h3
+              class="main__future-design-section__description-container__item__title"
+              id="content-management-title"
+            >
+              Robust content management
+            </h3>
+            <p
+              class="main__future-design-section__description-container__item__description"
+              aria-labelledby="content-management-title"
+            >
+              Flexible content management enables users to easily move through
+              posts. Increase the usability of your blog by adding customized
+              categories, sections, format, or flow. With this functionality,
+              you're in full control.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Infrastructure section -->
+      <section
+        class="main__infrastructure-section"
+        aria-labelledby="infrastructure-title"
+      >
+        <img
+          class="main__infrastructure-section__illustration-phone-image"
+          src="./images/illustration-phones.svg"
+          alt="Mobile phones displaying Blogr interface"
+        />
+        <div
+          class="main__infrastructure-section__circles-container"
+          role="presentation"
+        >
+          <img
+            class="main__infrastructure-section__circles-container__illustration-circles-image"
+            src="./images/bg-pattern-circles.svg"
+            alt=""
+            role="presentation"
+          />
+        </div>
+        <div class="main__infrastructure-section__description-container">
+          <h3
+            class="main__infrastructure-section__description-container__title"
+            id="infrastructure-title"
+          >
+            State of the Art Infrastructure
+          </h3>
+          <p
+            class="main__infrastructure-section__description-container__description"
+            aria-labelledby="infrastructure-title"
+          >
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This ensures your site
+            will load instantly, no matter where your readers are, keeping your
+            site competitive.
+          </p>
+        </div>
+      </section>
+
+      <!-- Features section -->
+      <section class="main__features-section" aria-labelledby="features-title">
+        <h2 class="visually-hidden" id="features-title">Features</h2>
+        <img
+          class="main__features-section__illustration-image"
+          src="./images/illustration-laptop-mobile.svg"
+          alt="Laptop showing Blogr features interface"
+        />
+        <div class="main__features-section__description-container">
+          <div class="main__features-section__description-container__item">
+            <h3
+              class="main__features-section__description-container__item__title"
+              id="open-source-title"
+            >
+              Free, open, simple
+            </h3>
+            <p
+              class="main__features-section__description-container__item__description"
+              aria-labelledby="open-source-title"
+            >
+              Blogr is a free and open source application backed by a large
+              community of helpful developers. It supports features such as code
+              syntax highlighting, RSS feeds, social media integration,
+              third-party commenting tools, and works seamlessly with Google
+              Analytics. The architecture is clean and is relatively easy to
+              learn.
+            </p>
+          </div>
+          <div class="main__features-section__description-container__item">
+            <h3
+              class="main__features-section__description-container__item__title"
+              id="tooling-title"
+            >
+              Powerful tooling
+            </h3>
+            <p
+              class="main__features-section__description-container__item__description"
+              aria-labelledby="tooling-title"
+            >
+              Batteries included. We built a simple and straightforward CLI tool
+              that makes customization and deployment a breeze, but capable of
+              producing even the most complicated sites.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <h3 class="footer__title">
+        <a href="/" aria-label="Blogr home">Blogr</a>
+      </h3>
+      <div class="footer__product-container">
+        <h4 class="footer__product-container__title" id="footer-product">
+          Product
+        </h4>
+        <nav
+          class="footer__product-container__links-container"
+          aria-labelledby="footer-product"
+        >
+          <a href="#">Overview</a>
+          <a href="#">Pricing</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Features</a>
+          <a href="#">Integration</a>
+        </nav>
+      </div>
+      <div class="footer__company-container">
+        <h4 class="footer__company-container__title" id="footer-company">
+          Company
+        </h4>
+        <nav
+          class="footer__company-container__links-container"
+          aria-labelledby="footer-company"
+        >
+          <a href="#">About</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </nav>
+      </div>
+      <div class="footer__connect-container">
+        <h4 class="footer__connect-container__title" id="footer-connect">
+          Connect
+        </h4>
+        <nav
+          class="footer__connect-container__links-container"
+          aria-labelledby="footer-connect"
+        >
+          <a href="#">Contact</a>
+          <a href="#">Newsletter</a>
+          <a href="#">LinkedIn</a>
+        </nav>
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
